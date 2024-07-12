@@ -1,19 +1,20 @@
 import re
 
 def add(var1): 
-    if var1 == "" or var1 == "0":                                              #testcase1 and testcase2
+    if var1 == "" or var1 == "0":  # Test case 1 and Test case 2
         return 0
-    delimiter = ','
-    if var1.startswith("//"):                                                  #testcas5 and tescase6
+    
+    delimiter = ','  # Default delimiter
+    
+    if var1.startswith("//"):   # Test case 5 and Test case 6
         delimiter_check = re.match(r"//(.+)\n", var1)
         if delimiter_check:
             delimiter = delimiter_check.group(1)
             var1 = var1.replace(f"//{delimiter}\n", "", 1)
-        #var1 = re.sub(f"[{delimiter}\n]", ",", var1)
-        var2 = re.split(r"\n|,",var1)
-        #var2 = [int(num) for num in var2 if num]
+        
+        var2 = re.split(r"\n|,", var1)
         result = sum(int(num) for num in var2 if num.strip().isdigit())
-    else:                                                                     #testcase3 and testcase4
+    else:  # Test case 3 and Test case 4
         var2 = var1.split(',')
         Num1 = int(var2[0].strip())
         Num2 = int(var2[1].strip())
