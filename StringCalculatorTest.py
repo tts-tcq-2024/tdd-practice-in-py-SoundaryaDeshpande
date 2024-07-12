@@ -2,7 +2,7 @@ import unittest
 from StringCalculator import add
 class TestStringCalculator(unittest.TestCase):
         
-        def test_expectZeroForEmptyInput(self): #Testcase1 
+        def test_expectZeroForEmptyInput(self): #Testcase1.
                 self.assertEqual(add(""), 0)
                 
         def test_expectZeroForSingleZero(self): #Testcase2
