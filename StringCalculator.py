@@ -14,7 +14,7 @@ def add(var1): #test case 1 and test case2
     var2=var1.split(',')
     var2=[int(num) for num in var2 if num]
     result=sum(var2)
-    else: #testcase3 and testcase4
+    elif("var1"): #testcase3 and testcase4
       var2=var1.split(',')
       Num1=int(var2[0].strip())
       Num2=int(var2[1].strp())
