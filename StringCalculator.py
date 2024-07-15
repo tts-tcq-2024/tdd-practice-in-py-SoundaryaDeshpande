@@ -26,7 +26,7 @@ def valid_number(num_str):
         num=int(num_str)
         return num<=1000
     except ValueError:
-        return false
+        return False
     
    
 
