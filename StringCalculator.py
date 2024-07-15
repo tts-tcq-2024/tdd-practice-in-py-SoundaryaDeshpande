@@ -21,8 +21,14 @@ def split_numbers(var1,delimiter):
     return re.split(rf"{re.escape(delimiter)}|\n", var1)
 def summing_valid_numbers_only(var2):
     return sum(int(num) for num in var2 if valid_number(num))
-def valid_number(num):
-    return num.isdigit() and int(num) <= 1000
+def valid_number(num_str):
+    try:
+        num=int(num_str)
+        return num<=1000
+    except ValueError:
+        return false
+    
+   
 
     
     
