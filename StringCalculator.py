@@ -5,7 +5,7 @@ def add(var1):
     delimiter = delimiter_call(var1)
     var1=numbers(var1)
     var2=split_numbers(var1,delimiter)
-    result=sum(int(num) for num in var2 if is_valid_number(num))
+    result=sum(int(num) for num in var2 if valid_number(num))
     return result
 def delimiter_call(var1):
      if var1.startswith("//"):
