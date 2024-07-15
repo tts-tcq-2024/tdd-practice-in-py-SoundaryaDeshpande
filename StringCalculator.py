@@ -3,7 +3,6 @@ def add(var1):
     if var1 == "" or var1 == "0":
         return 0
     delimiter = delimiter_call(var1)
-    var1=numbers(var1)
     var2=numbers(var1,delimiter)
     result=sumnumbers(var2)
     return result
@@ -13,8 +12,8 @@ def delimiter_call(var1):
      return ','
 def numbers(var1,delimiter):
      if var1.startswith("//"):
-         return var1[4:]
-     return var1
+         return var1[4:].split(delimiter)
+     return var1.split(delimiter)
 def sumnumbers(var2):
     return sum(parse_int(num) for num in var2 if valid_number(num))
 def parse_int(num_str):
